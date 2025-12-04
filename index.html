@@ -4,13 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>我不想努力了</title>
-  <!-- PWA 設定 -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="作文神器">
-  <link rel="apple-touch-icon" href="icon.png">
-  <meta name="theme-color" content="#5A8F7B">
+ 
   <!-- 引入 xlsx.js 函式庫，用於處理 Excel 檔案 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <!-- 引入 Supabase.js 函式庫 -->
@@ -6966,16 +6960,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// --- PWA Service Worker 設定 (直接寫喺 JS 入面，唔使加 <script> 標籤) ---
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('./sw.js').then(function(registration) {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-        console.log('ServiceWorker registration failed: ', err);
-      });
-    });
-}
+
 // -------------------------------------------------------------
 // ============================
 // ✅ 新增：Email + 密碼 登入邏輯
